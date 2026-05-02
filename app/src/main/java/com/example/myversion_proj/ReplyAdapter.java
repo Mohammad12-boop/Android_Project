@@ -40,7 +40,7 @@ public class ReplyAdapter extends RecyclerView.Adapter<ReplyAdapter.ReplyViewHol
         holder.studentId.setText("ID: " + replyCard.getStudentId());
         holder.submittedTime.setText("" + replyCard.getSubmittedTime());
         holder.UploadBtn.setOnClickListener(v -> {
-            Uri uri = Uri.parse("http://10.0.2.2/school_app/" + replyCard.getFilePath());
+            Uri uri = Uri.parse("http://10.0.2.2/school/" + replyCard.getFilePath());
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             context.startActivity(intent);
         });
